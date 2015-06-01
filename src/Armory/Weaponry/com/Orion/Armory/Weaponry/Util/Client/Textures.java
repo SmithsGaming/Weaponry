@@ -74,10 +74,10 @@ public class Textures
         {
             public static CustomResource ChainResource = new CustomResource(com.Orion.Armory.Weaponry.Util.References.InternalNames.Materials.Vanilla.CHAIN, "armory:basic/16x Chain", "", com.Orion.Armory.Weaponry.Util.Client.Colors.Metals.CHAIN);
             public static CustomResource BronzeResource = new CustomResource(com.Orion.Armory.Weaponry.Util.References.InternalNames.Materials.Common.BRONZE, "armory:basic/16x Chain", "", com.Orion.Armory.Weaponry.Util.Client.Colors.Metals.BRONZE);
-            public static CustomResource AlumiteResource = new CustomResource(com.Orion.Armory.Weaponry.Util.References.InternalNames.Materials.TinkersConstruct.ALUMITE, "armory:basic/16x Ring", "", com.Orion.Armory.Weaponry.Util.Client.Colors.Metals.ALUMITE);
-            public static CustomResource ManyullunResource = new CustomResource(com.Orion.Armory.Weaponry.Util.References.InternalNames.Materials.TinkersConstruct.MANYULLUN, "armory:basic/16x Ring", "", com.Orion.Armory.Weaponry.Util.Client.Colors.Metals.MANYULLUN);
-            public static CustomResource CobaltResource = new CustomResource(com.Orion.Armory.Weaponry.Util.References.InternalNames.Materials.TinkersConstruct.COBALT, "armory:basic/16x Ring", "", com.Orion.Armory.Weaponry.Util.Client.Colors.Metals.COBALT);
-            public static CustomResource ArditeResource = new CustomResource(com.Orion.Armory.Weaponry.Util.References.InternalNames.Materials.TinkersConstruct.ARDITE, "armory:basic/16x Ring", "", com.Orion.Armory.Weaponry.Util.Client.Colors.Metals.ARDITE);
+            public static CustomResource AlumiteResource = new CustomResource(com.Orion.Armory.Weaponry.Util.References.InternalNames.Materials.TinkersConstruct.ALUMITE, "armory:basic/16x Chain", "", com.Orion.Armory.Weaponry.Util.Client.Colors.Metals.ALUMITE);
+            public static CustomResource ManyullunResource = new CustomResource(com.Orion.Armory.Weaponry.Util.References.InternalNames.Materials.TinkersConstruct.MANYULLUN, "armory:basic/16x Chain", "", com.Orion.Armory.Weaponry.Util.Client.Colors.Metals.MANYULLUN);
+            public static CustomResource CobaltResource = new CustomResource(com.Orion.Armory.Weaponry.Util.References.InternalNames.Materials.TinkersConstruct.COBALT, "armory:basic/16x Chain", "", com.Orion.Armory.Weaponry.Util.Client.Colors.Metals.COBALT);
+            public static CustomResource ArditeResource = new CustomResource(com.Orion.Armory.Weaponry.Util.References.InternalNames.Materials.TinkersConstruct.ARDITE, "armory:basic/16x Chain", "", com.Orion.Armory.Weaponry.Util.Client.Colors.Metals.ARDITE);
         }
 
         public static class ItemNugget
