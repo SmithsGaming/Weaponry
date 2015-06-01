@@ -76,7 +76,7 @@ if(System.getenv().TRAVIS_BRANCH.toString().contains("Development"))
     version = version + "-SNAPSHOT"
 }
 group= "com.Orion.Armory.Weaponry"
-archivesBaseName = "Armory - Weaponry"
+archivesBaseName = "Armory-Weaponry"
 
 //IDea fix for
 idea {
