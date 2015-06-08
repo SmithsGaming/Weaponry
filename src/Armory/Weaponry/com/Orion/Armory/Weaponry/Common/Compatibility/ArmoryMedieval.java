@@ -1,8 +1,8 @@
 package com.Orion.Armory.Weaponry.Common.Compatibility;
 
-import com.Orion.Armory.API.Armor.IArmorMaterial;
 import com.Orion.Armory.API.Events.Common.ActivateArmorAddonEvent;
 import com.Orion.Armory.API.Events.Common.ModifyMaterialEvent;
+import com.Orion.Armory.API.Materials.IArmorMaterial;
 import com.Orion.Armory.Weaponry.Util.References;
 import cpw.mods.fml.common.eventhandler.Event;
 

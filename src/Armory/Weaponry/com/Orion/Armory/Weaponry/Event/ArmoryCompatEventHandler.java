@@ -3,8 +3,8 @@ package com.Orion.Armory.Weaponry.Event;
 import com.Orion.Armory.API.Events.Common.ActivateArmorAddonEvent;
 import com.Orion.Armory.API.Events.Common.ModifyMaterialEvent;
 import com.Orion.Armory.API.Events.Common.RegisterMaterialsEvent;
-import com.Orion.Armory.Common.Item.Armor.TierMedieval.ArmorMaterialMedieval;
-import com.Orion.Armory.Common.Registry.MedievalRegistry;
+import com.Orion.Armory.Common.Material.ArmorMaterial;
+import com.Orion.Armory.Common.Material.MaterialRegistry;
 import com.Orion.Armory.Util.Client.TranslationKeys;
 import com.Orion.Armory.Weaponry.Common.Compatibility.ArmoryMedieval;
 import com.Orion.Armory.Weaponry.Util.Client.Colors;
@@ -29,19 +29,19 @@ public class ArmoryCompatEventHandler
     @SubscribeEvent
     public void RegisterMaterialsHandler(RegisterMaterialsEvent pEvent)
     {
-        ArmorMaterialMedieval tChain = new ArmorMaterialMedieval(References.InternalNames.Materials.Vanilla.CHAIN, TranslationKeys.Materials.VisibleNames.Steel, "Steel", EnumChatFormatting.GRAY, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.CHAIN, 1148, 0.25F, new ItemStack(TinkerTools.materials, 1, 16));
-        ArmorMaterialMedieval tAlumite = new ArmorMaterialMedieval(References.InternalNames.Materials.TinkersConstruct.ALUMITE, TranslationKeys.Materials.VisibleNames.Alumite, "Alumite", EnumChatFormatting.RED, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.ALUMITE, 1023, 0.2F, new ItemStack(TinkerTools.materials, 1, 15));
-        ArmorMaterialMedieval tArdite = new ArmorMaterialMedieval(References.InternalNames.Materials.TinkersConstruct.ARDITE, TranslationKeys.Materials.VisibleNames.Ardite, "Ardite", EnumChatFormatting.DARK_RED, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.ARDITE, 1752, 0.4F, new ItemStack(TinkerTools.materials, 1, 4));
-        ArmorMaterialMedieval tCobalt = new ArmorMaterialMedieval(References.InternalNames.Materials.TinkersConstruct.COBALT, TranslationKeys.Materials.VisibleNames.Cobalt, "Cobalt", EnumChatFormatting.BLUE, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.COBALT, 1635, 0.3F, new ItemStack(TinkerTools.materials, 1, 3));
-        ArmorMaterialMedieval tManyullun = new ArmorMaterialMedieval(References.InternalNames.Materials.TinkersConstruct.MANYULLUN, TranslationKeys.Materials.VisibleNames.Manyullun, "Manyullyn", EnumChatFormatting.LIGHT_PURPLE, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.MANYULLUN, 2963, 0.489F, new ItemStack(TinkerTools.materials, 1, 5));
-        ArmorMaterialMedieval tBronze = new ArmorMaterialMedieval(References.InternalNames.Materials.Common.BRONZE, TranslationKeys.Materials.VisibleNames.Bronze, "Bronze", EnumChatFormatting.GOLD, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.BRONZE, 950, 0.186F, new ItemStack(TinkerTools.materials, 1, 13));
+        ArmorMaterial tChain = new ArmorMaterial(References.InternalNames.Materials.Vanilla.CHAIN, TranslationKeys.Materials.VisibleNames.Steel, "Steel", EnumChatFormatting.GRAY, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.CHAIN, 1378, 0.25F, new ItemStack(TinkerTools.materials, 1, 16));
+        ArmorMaterial tAlumite = new ArmorMaterial(References.InternalNames.Materials.TinkersConstruct.ALUMITE, TranslationKeys.Materials.VisibleNames.Alumite, "Alumite", EnumChatFormatting.RED, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.ALUMITE, 1259, 0.2F, new ItemStack(TinkerTools.materials, 1, 15));
+        ArmorMaterial tArdite = new ArmorMaterial(References.InternalNames.Materials.TinkersConstruct.ARDITE, TranslationKeys.Materials.VisibleNames.Ardite, "Ardite", EnumChatFormatting.DARK_RED, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.ARDITE, 2159, 0.4F, new ItemStack(TinkerTools.materials, 1, 4));
+        ArmorMaterial tCobalt = new ArmorMaterial(References.InternalNames.Materials.TinkersConstruct.COBALT, TranslationKeys.Materials.VisibleNames.Cobalt, "Cobalt", EnumChatFormatting.BLUE, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.COBALT, 2056, 0.3F, new ItemStack(TinkerTools.materials, 1, 3));
+        ArmorMaterial tManyullun = new ArmorMaterial(References.InternalNames.Materials.TinkersConstruct.MANYULLUN, TranslationKeys.Materials.VisibleNames.Manyullun, "Manyullyn", EnumChatFormatting.LIGHT_PURPLE, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.MANYULLUN, 3209, 0.489F, new ItemStack(TinkerTools.materials, 1, 5));
+        ArmorMaterial tBronze = new ArmorMaterial(References.InternalNames.Materials.Common.BRONZE, TranslationKeys.Materials.VisibleNames.Bronze, "Bronze", EnumChatFormatting.GOLD, true, new HashMap<String, Float>(), new HashMap<String, Integer>(), new HashMap<String, Integer>(), new HashMap<String, Boolean>(), Colors.Metals.BRONZE, 1193, 0.186F, new ItemStack(TinkerTools.materials, 1, 13));
 
-        MedievalRegistry.getInstance().registerMaterial(tChain);
-        MedievalRegistry.getInstance().registerMaterial(tAlumite);
-        MedievalRegistry.getInstance().registerMaterial(tArdite);
-        MedievalRegistry.getInstance().registerMaterial(tCobalt);
-        MedievalRegistry.getInstance().registerMaterial(tManyullun);
-        MedievalRegistry.getInstance().registerMaterial(tBronze);
+        MaterialRegistry.getInstance().registerMaterial(tChain);
+        MaterialRegistry.getInstance().registerMaterial(tAlumite);
+        MaterialRegistry.getInstance().registerMaterial(tArdite);
+        MaterialRegistry.getInstance().registerMaterial(tCobalt);
+        MaterialRegistry.getInstance().registerMaterial(tManyullun);
+        MaterialRegistry.getInstance().registerMaterial(tBronze);
     }
 
     @SubscribeEvent
