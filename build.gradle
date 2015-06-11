@@ -173,8 +173,6 @@ curse {
                 {
                     releaseType = "Beta"
                 }
-
-                additionalArtifact devJar
             }
             else
             {
