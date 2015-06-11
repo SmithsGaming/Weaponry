@@ -16,6 +16,8 @@ def getDate() {
     return formattedDate
 }
 
+def build_file = new File("build_mode.properties")
+def build_mode = build_file.text
 
 //ForgeGradle BuildScript.
 buildscript {
