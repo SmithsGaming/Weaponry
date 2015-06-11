@@ -7,4 +7,5 @@ install: ./gradlew setupCIWorkspace -S
 script: ./gradlew build -i -S
 after_success:
   - ./gradlew uploadJars -S
+  - ./gradlew curse -S
   - ./gradlew createGithubBranches -S
