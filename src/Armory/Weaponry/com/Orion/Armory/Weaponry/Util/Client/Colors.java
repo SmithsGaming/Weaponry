@@ -1,6 +1,6 @@
 package com.Orion.Armory.Weaponry.Util.Client;
 
-import com.Orion.Armory.Util.Client.Color;
+import com.Orion.Armory.Util.Client.Color.Color;
 
 /**
  * Created by Orion

@@ -1,6 +1,7 @@
 package com.Orion.Armory.Weaponry;
 
 import com.Orion.Armory.Weaponry.Common.CommonProxy;
+import com.Orion.Armory.Weaponry.Common.Config.ConfigurationHandler;
 import com.Orion.Armory.Weaponry.Util.References;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -14,7 +15,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
  * Copyrighted according to Project specific license
  */
 @Mod(modid = References.General.MOD_ID, name = "Armory-Weaponry", version = References.General.VERSION,
-        dependencies = "required-after:Forge@[10.13,);required-after:Mantle;after:ForgeMultipart;required-after:TConstruct;required-after:Armory")
+        dependencies = "required-after:Forge@[10.13,);required-after:Mantle;after:ForgeMultipart;required-after:TConstruct;required-after:Armory;after:Armory-World")
 public class Weaponry
 {
     // Instance of this mod use for internal and Forge references
@@ -28,6 +29,7 @@ public class Weaponry
     @Mod.EventHandler
     public void preInit (FMLPreInitializationEvent event)
     {
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         proxy.registerEventHandlers();
     }
 }
