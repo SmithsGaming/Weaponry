@@ -15,7 +15,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
  * Copyrighted according to Project specific license
  */
 @Mod(modid = References.General.MOD_ID, name = "Armory-Weaponry", version = References.General.VERSION,
-        dependencies = "required-after:Forge@[10.13,);required-after:Mantle;after:ForgeMultipart;required-after:TConstruct;required-after:Armory;after:Armory-World")
+        dependencies = "required-after:Forge@[10.13,);required-after:Mantle;after:ForgeMultipart;required-after:TConstruct;required-after:Armory@[1.1,);after:Armory-World")
 public class Weaponry
 {
     // Instance of this mod use for internal and Forge references

@@ -1,7 +1,7 @@
 package com.Orion.Armory.Weaponry.Util.Client;
 
 
-import com.Orion.Armory.Util.Client.CustomResource;
+import com.SmithsModding.Armory.Util.Client.CustomResource;
 
 /**
  * Created by Orion

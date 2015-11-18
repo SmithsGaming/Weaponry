@@ -1,14 +1,14 @@
 package com.Orion.Armory.Weaponry.Event;
 
-import com.Orion.Armory.API.Events.Common.ActivateArmorAddonEvent;
-import com.Orion.Armory.API.Events.Common.ModifyMaterialEvent;
-import com.Orion.Armory.API.Events.Common.RegisterMaterialsEvent;
-import com.Orion.Armory.API.Materials.IArmorMaterial;
-import com.Orion.Armory.Common.Material.ArmorMaterial;
-import com.Orion.Armory.Common.Material.MaterialRegistry;
-import com.Orion.Armory.Common.Registry.GeneralRegistry;
-import com.Orion.Armory.Util.Client.TranslationKeys;
-import com.Orion.Armory.Util.Core.ItemStackHelper;
+import com.SmithsModding.Armory.API.Events.Common.ActivateArmorAddonEvent;
+import com.SmithsModding.Armory.API.Events.Common.ModifyMaterialEvent;
+import com.SmithsModding.Armory.API.Events.Common.RegisterMaterialsEvent;
+import com.SmithsModding.Armory.API.Materials.IArmorMaterial;
+import com.SmithsModding.Armory.Common.Material.ArmorMaterial;
+import com.SmithsModding.Armory.Common.Material.MaterialRegistry;
+import com.SmithsModding.Armory.Common.Registry.GeneralRegistry;
+import com.SmithsModding.Armory.Util.Client.TranslationKeys;
+import com.SmithsModding.Armory.Util.Core.ItemStackHelper;
 import com.Orion.Armory.Weaponry.Common.Compatibility.ArmoryMedieval;
 import com.Orion.Armory.Weaponry.Common.Config.WeaponryConfigs;
 import com.Orion.Armory.Weaponry.Util.Client.Colors;
@@ -112,66 +112,66 @@ public class ArmoryCompatEventHandler
     @SubscribeEvent
     public void ActivateArmorAddonHandler(ActivateArmorAddonEvent pEvent)
     {
-        if (!pEvent.iArmorMaterial.getType().equals(com.Orion.Armory.Util.References.InternalNames.Tiers.MEDIEVAL))
+        if (!pEvent.iArmorMaterial.getType().equals(com.SmithsModding.Armory.Util.References.InternalNames.Tiers.MEDIEVAL))
             return;
 
-        if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Helmet.TOP))
+        if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Helmet.TOP))
         {
             ArmoryMedieval.HandleTopHeadMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Helmet.RIGHT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Helmet.RIGHT))
         {
             ArmoryMedieval.HandleRightSideHeadMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Helmet.LEFT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Helmet.LEFT))
         {
             ArmoryMedieval.HandleLeftSideHeadMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Chestplate.SHOULDERLEFT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Chestplate.SHOULDERLEFT))
         {
             ArmoryMedieval.HandleLeftShoulderPadMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Chestplate.SHOULDERRIGHT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Chestplate.SHOULDERRIGHT))
         {
             ArmoryMedieval.HandleRightShouldPadMaterialsMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Chestplate.FRONTLEFT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Chestplate.FRONTLEFT))
         {
             ArmoryMedieval.HandleLeftFrontChestplateMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Chestplate.FRONTRIGHT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Chestplate.FRONTRIGHT))
         {
             ArmoryMedieval.HandleRightFrontChestplateMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Chestplate.BACKLEFT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Chestplate.BACKLEFT))
         {
             ArmoryMedieval.HandleLeftBackChestplateMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Chestplate.BACKRIGHT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Chestplate.BACKRIGHT))
         {
             ArmoryMedieval.HandleRightBackChestplateMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Leggings.FRONTLEFT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Leggings.FRONTLEFT))
         {
             ArmoryMedieval.HandleLeftFrontLeggingsMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Leggings.FRONTRIGHT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Leggings.FRONTRIGHT))
         {
             ArmoryMedieval.HandleRightFrontLeggingsMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Leggings.BACKLEFT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Leggings.BACKLEFT))
         {
             ArmoryMedieval.HandleLeftBackLeggingsMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Leggings.BACKRIGHT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Leggings.BACKRIGHT))
         {
             ArmoryMedieval.HandleRightBackLegginsMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Shoes.LEFT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Shoes.LEFT))
         {
             ArmoryMedieval.HandleLeftShoesMaterials(pEvent);
         }
-        else if (!pEvent.iAddon.getAddonPositionID().equals(com.Orion.Armory.Util.References.InternalNames.AddonPositions.Shoes.RIGHT))
+        else if (!pEvent.iAddon.getAddonPositionID().equals(com.SmithsModding.Armory.Util.References.InternalNames.AddonPositions.Shoes.RIGHT))
         {
             ArmoryMedieval.HandleRightShoesMaterials(pEvent);
         }
@@ -180,19 +180,19 @@ public class ArmoryCompatEventHandler
     @SubscribeEvent
     public void ModifyMaterialHandler(ModifyMaterialEvent pEvent)
     {
-        if (pEvent.iArmor.getInternalName().equals(com.Orion.Armory.Util.References.InternalNames.Armor.MEDIEVALHELMET))
+        if (pEvent.iArmor.getInternalName().equals(com.SmithsModding.Armory.Util.References.InternalNames.Armor.MEDIEVALHELMET))
         {
             ArmoryMedieval.ModifyMaterialForHelmet(pEvent);
         }
-        else if (pEvent.iArmor.getInternalName().equals(com.Orion.Armory.Util.References.InternalNames.Armor.MEDIEVALCHESTPLATE))
+        else if (pEvent.iArmor.getInternalName().equals(com.SmithsModding.Armory.Util.References.InternalNames.Armor.MEDIEVALCHESTPLATE))
         {
             ArmoryMedieval.ModifyMaterialForChestplate(pEvent);
         }
-        else if (pEvent.iArmor.getInternalName().equals(com.Orion.Armory.Util.References.InternalNames.Armor.MEDIEVALLEGGINGS))
+        else if (pEvent.iArmor.getInternalName().equals(com.SmithsModding.Armory.Util.References.InternalNames.Armor.MEDIEVALLEGGINGS))
         {
             ArmoryMedieval.ModifyMaterialForLeggings(pEvent);
         }
-        else if (pEvent.iArmor.getInternalName().equals(com.Orion.Armory.Util.References.InternalNames.Armor.MEDIEVALSHOES))
+        else if (pEvent.iArmor.getInternalName().equals(com.SmithsModding.Armory.Util.References.InternalNames.Armor.MEDIEVALSHOES))
         {
             ArmoryMedieval.ModifyMaterialForShoes(pEvent);
         }

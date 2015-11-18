@@ -1,13 +1,13 @@
 package com.Orion.Armory.Weaponry.Client.Compatibility;
 
-import com.Orion.Armory.API.Events.Client.RegisterItemResourcesEvent;
-import com.Orion.Armory.API.Events.Client.RegisterMaterialResourceEvent;
-import com.Orion.Armory.Common.Item.ItemMetalChain;
-import com.Orion.Armory.Common.Item.ItemMetalRing;
-import com.Orion.Armory.Common.Item.ItemNugget;
-import com.Orion.Armory.Common.Item.ItemPlate;
-import com.Orion.Armory.Util.Client.CustomResource;
-import com.Orion.Armory.Util.References;
+import com.SmithsModding.Armory.API.Events.Client.RegisterItemResourcesEvent;
+import com.SmithsModding.Armory.API.Events.Client.RegisterMaterialResourceEvent;
+import com.SmithsModding.Armory.Common.Item.ItemMetalChain;
+import com.SmithsModding.Armory.Common.Item.ItemMetalRing;
+import com.SmithsModding.Armory.Common.Item.ItemNugget;
+import com.SmithsModding.Armory.Common.Item.ItemPlate;
+import com.SmithsModding.Armory.Util.Client.CustomResource;
+import com.SmithsModding.Armory.Util.References;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 /**

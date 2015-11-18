@@ -58,7 +58,7 @@ repositories {
     }
     maven { //My own repo (used for uploading and dependency)
         name 'OrionMavenRepo'
-        url 'http://mavenrepo.orionminecraft.com/'
+        url 'http://mavenrepo.armory.orionminecraft.com/'
     }
 }
 
@@ -101,7 +101,7 @@ minecraft {
 //Tells gradle which dependencies are needed for gradle and project
 dependencies {
     //Mod dependencies
-    compile "com.Orion.Armory:Armory:"+ config.armory_version
+    compile "com.SmithsModding.Armory:Armory:"+ config.armory_version
     compile "mantle:Mantle:${config.minecraft_version}-${config.mantle_version}:deobf"
     compile "tconstruct:TConstruct:${config.minecraft_version}-${config.tconstruct_version}:deobf"
 
