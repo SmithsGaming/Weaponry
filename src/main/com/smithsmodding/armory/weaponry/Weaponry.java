@@ -1,9 +1,9 @@
-package com.smithsmodding.armorytemp.weaponrytemp;
+package com.smithsmodding.armory.weaponry;
 
 import com.smithsmodding.armory.api.IArmoryAPI;
-import com.smithsmodding.armorytemp.weaponrytemp.commontemp.CommonProxy;
-import com.smithsmodding.armorytemp.weaponrytemp.commontemp.configtemp.WeaponryConfigs;
-import com.smithsmodding.armorytemp.weaponrytemp.utiltemp.References;
+import com.smithsmodding.armory.weaponry.common.CommonProxy;
+import com.smithsmodding.armory.weaponry.common.config.WeaponryConfigs;
+import com.smithsmodding.armory.weaponry.util.References;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

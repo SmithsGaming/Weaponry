@@ -132,10 +132,10 @@ dependencies {
 sourceSets {
     main {
         java {
-            srcDir 'src/armory/weaponry'
+            srcDir 'src/main'
         }
         resources {
-            srcDir 'resources'
+            srcDir 'src/resources'
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.smithsmodding.armorytemp.weaponrytemp.utiltemp.Client;
+package com.smithsmodding.armory.weaponry.util.Client;
 
 /**
  * Created by marcf on 7/9/2016.

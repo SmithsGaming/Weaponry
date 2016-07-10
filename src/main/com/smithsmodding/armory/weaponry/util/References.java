@@ -1,4 +1,4 @@
-package com.smithsmodding.armorytemp.weaponrytemp.utiltemp;
+package com.smithsmodding.armory.weaponry.util;
 
 /**
  * Created by smithsmodding
