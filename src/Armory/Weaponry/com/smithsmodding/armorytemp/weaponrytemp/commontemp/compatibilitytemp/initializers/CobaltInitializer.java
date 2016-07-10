@@ -1,4 +1,4 @@
-package com.smithsmodding.armory.weaponry.common.compatibility.initializers;
+package com.smithsmodding.armorytemp.weaponrytemp.commontemp.compatibilitytemp.initializers;
 
 import com.smithsmodding.armory.api.armor.MLAAddon;
 import com.smithsmodding.armory.api.armor.MultiLayeredArmor;
@@ -7,14 +7,14 @@ import com.smithsmodding.armory.api.materials.IArmorMaterial;
 import com.smithsmodding.armory.api.util.client.Textures;
 import com.smithsmodding.armory.api.util.client.TranslationKeys;
 import com.smithsmodding.armory.api.util.references.References;
-import com.smithsmodding.armory.weaponry.Weaponry;
+import com.smithsmodding.armorytemp.weaponrytemp.Weaponry;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 
 /**
  * Created by marcf on 7/9/2016.
  */
-public class ArditeInitializer implements IMaterialInitializer {
+public class CobaltInitializer implements IMaterialInitializer {
     private static void registerBaseLayers(IArmorMaterial material, MultiLayeredArmor armor) {
         MLAAddon baseLayer;
 
@@ -62,8 +62,8 @@ public class ArditeInitializer implements IMaterialInitializer {
         Weaponry.armory.getMedievalArmorPartRegistry().registerUpgrade(left);
         Weaponry.armory.getMedievalArmorPartRegistry().registerUpgrade(right);
 
-        Weaponry.armory.getMedievalArmorPartRegistry().setPartStateForMaterial(material, left, true);
-        Weaponry.armory.getMedievalArmorPartRegistry().setPartStateForMaterial(material, right, true);
+        Weaponry.armory.getMedievalArmorPartRegistry().setPartStateForMaterial(material, left, false);
+        Weaponry.armory.getMedievalArmorPartRegistry().setPartStateForMaterial(material, right, false);
     }
 
     private static void registerFrontProtection(IArmorMaterial material) {
@@ -117,26 +117,26 @@ public class ArditeInitializer implements IMaterialInitializer {
     }
 
     private static void modifyHelmet(IArmorMaterial material) {
-        material.setBaseDamageAbsorption(References.InternalNames.Armor.MEDIEVALHELMET, 2.5F);
-        material.setBaseDurability(References.InternalNames.Armor.MEDIEVALHELMET, 100);
+        material.setBaseDamageAbsorption(References.InternalNames.Armor.MEDIEVALHELMET, 3F);
+        material.setBaseDurability(References.InternalNames.Armor.MEDIEVALHELMET, 140);
         material.setMaxModifiersOnPart(References.InternalNames.Armor.MEDIEVALHELMET, 2);
     }
 
     private static void modifyChestplate(IArmorMaterial material) {
-        material.setBaseDamageAbsorption(References.InternalNames.Armor.MEDIEVALCHESTPLATE, 3.0F);
-        material.setBaseDurability(References.InternalNames.Armor.MEDIEVALCHESTPLATE, 100);
+        material.setBaseDamageAbsorption(References.InternalNames.Armor.MEDIEVALCHESTPLATE, 3.5F);
+        material.setBaseDurability(References.InternalNames.Armor.MEDIEVALCHESTPLATE, 140);
         material.setMaxModifiersOnPart(References.InternalNames.Armor.MEDIEVALCHESTPLATE, 2);
     }
 
     private static void modifyLeggings(IArmorMaterial material) {
-        material.setBaseDamageAbsorption(References.InternalNames.Armor.MEDIEVALLEGGINGS, 2.5F);
-        material.setBaseDurability(References.InternalNames.Armor.MEDIEVALLEGGINGS, 100);
+        material.setBaseDamageAbsorption(References.InternalNames.Armor.MEDIEVALLEGGINGS, 3F);
+        material.setBaseDurability(References.InternalNames.Armor.MEDIEVALLEGGINGS, 140);
         material.setMaxModifiersOnPart(References.InternalNames.Armor.MEDIEVALLEGGINGS, 2);
     }
 
     private static void modifyShoes(IArmorMaterial material) {
-        material.setBaseDamageAbsorption(References.InternalNames.Armor.MEDIEVALSHOES, 2.0F);
-        material.setBaseDurability(References.InternalNames.Armor.MEDIEVALSHOES, 100);
+        material.setBaseDamageAbsorption(References.InternalNames.Armor.MEDIEVALSHOES, 2.5F);
+        material.setBaseDurability(References.InternalNames.Armor.MEDIEVALSHOES, 140);
         material.setMaxModifiersOnPart(References.InternalNames.Armor.MEDIEVALSHOES, 2);
     }
 

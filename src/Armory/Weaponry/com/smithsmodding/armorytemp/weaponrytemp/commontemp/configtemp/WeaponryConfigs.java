@@ -1,6 +1,6 @@
-package com.smithsmodding.armory.weaponry.common.config;
+package com.smithsmodding.armorytemp.weaponrytemp.commontemp.configtemp;
 
-import com.smithsmodding.armory.weaponry.util.References;
+import com.smithsmodding.armorytemp.weaponrytemp.utiltemp.References;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;

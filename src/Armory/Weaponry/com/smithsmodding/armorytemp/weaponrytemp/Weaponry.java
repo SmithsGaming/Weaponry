@@ -1,9 +1,9 @@
-package com.smithsmodding.armory.weaponry;
+package com.smithsmodding.armorytemp.weaponrytemp;
 
 import com.smithsmodding.armory.api.IArmoryAPI;
-import com.smithsmodding.armory.weaponry.common.CommonProxy;
-import com.smithsmodding.armory.weaponry.common.config.WeaponryConfigs;
-import com.smithsmodding.armory.weaponry.util.References;
+import com.smithsmodding.armorytemp.weaponrytemp.commontemp.CommonProxy;
+import com.smithsmodding.armorytemp.weaponrytemp.commontemp.configtemp.WeaponryConfigs;
+import com.smithsmodding.armorytemp.weaponrytemp.utiltemp.References;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -17,7 +17,7 @@ import net.minecraftforge.fml.relauncher.Side;
  * Copyrighted according to Project specific license
  */
 @Mod(modid = References.General.MOD_ID, name = "armory-weaponry", version = References.General.VERSION,
-        dependencies = "required-after:Forge;required-after:mantle;after:ForgeMultipart;required-after:tconstruct;required-after:Armory;after:armory-World")
+        dependencies = "required-after:Forge;required-after:mantle;required-after:tconstruct;required-after:Armory;after:Armory-World")
 public class Weaponry
 {
     // Instance of this mod use for internal and Forge references

@@ -1,9 +1,9 @@
-package com.smithsmodding.armory.weaponry.common;
+package com.smithsmodding.armorytemp.weaponrytemp.commontemp;
 
 import com.smithsmodding.armory.api.IArmoryAPI;
-import com.smithsmodding.armory.weaponry.Weaponry;
-import com.smithsmodding.armory.weaponry.common.compatibility.ArmoryMaterialInitializer;
-import com.smithsmodding.armory.weaponry.util.ModLogger;
+import com.smithsmodding.armorytemp.weaponrytemp.Weaponry;
+import com.smithsmodding.armorytemp.weaponrytemp.commontemp.compatibilitytemp.ArmoryMaterialInitializer;
+import com.smithsmodding.armorytemp.weaponrytemp.utiltemp.ModLogger;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
 
 /**
