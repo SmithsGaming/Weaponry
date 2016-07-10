@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.SmithsModding.Armory:Armory:api:1.9.4-1.1.0.1-289-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.SmithsModding.Armory/Armory/1.9.4-1.1.0.1-289-SNAPSHOT/c1b9913f78d482c8912518e112eb5aa4391d480/Armory-1.9.4-1.1.0.1-289-SNAPSHOT-api.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.SmithsModding.Armory/Armory/1.9.4-1.1.0.1-289-SNAPSHOT/869b07eb3480f2786aa71c4f2c7991998d3f7f78/Armory-1.9.4-1.1.0.1-289-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.SmithsModding.Armory/Armory/1.9.4-1.1.0.1-289-SNAPSHOT/afe674f786d85d7b41be4a3717fdff8ed3968f15/Armory-1.9.4-1.1.0.1-289-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: deobf.com.smithsmodding.smithscore:smithscore:1.9.4-1.1.0.1-186">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/minecraft/deobfedDeps/deobf/com/smithsmodding/smithscore/smithscore/1.9.4-1.1.0.1-186/smithscore-1.9.4-1.1.0.1-186.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/minecraft/deobfedDeps/deobf/com/smithsmodding/smithscore/smithscore/1.9.4-1.1.0.1-186/smithscore-1.9.4-1.1.0.1-186-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

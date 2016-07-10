@@ -43,7 +43,7 @@ public class ArmoryMaterialInitializer {
         if (Weaponry.side == Side.CLIENT) {
             ardite.setRenderInfo(new MaterialRenderControllers.Metal(TinkerMaterials.ardite.renderInfo.getVertexColor()));
             cobalt.setRenderInfo(new MaterialRenderControllers.Metal(TinkerMaterials.cobalt.renderInfo.getVertexColor()));
-            manyullun.setRenderInfo(new MaterialRenderControllers.Metal(TinkerMaterials.magmaslime.renderInfo.getVertexColor()));
+            manyullun.setRenderInfo(new MaterialRenderControllers.Metal(TinkerMaterials.manyullyn.renderInfo.getVertexColor()));
         }
 
         api.getArmorMaterialRegistry().registerMaterial(ardite, new ArditeInitializer());

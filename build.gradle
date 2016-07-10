@@ -119,11 +119,11 @@ dependencies {
     //Mod dependencies
     deobfCompile group: 'com.smithsmodding.smithscore', name: 'smithscore', version: config.minecraft_version + "-" + config.smithscore_version, classifier: 'dev'
     deobfCompile "mezz.jei:jei_" + config.minecraft_version + ":" + config.jei_version
-    compile "com.SmithsModding.armory:armory:" + config.minecraft_version + "-" + config.armory_version + ":api"
+    compile "com.SmithsModding.Armory:Armory:" + config.minecraft_version + "-" + config.armory_version + ":api"
     deobfCompile "slimeknights.mantle:Mantle:${config.minecraft_version}-${config.mantle_version}"
     deobfCompile "slimeknights:TConstruct:${config.minecraft_version}-${config.tconstruct_version}"
 
-    runtime "com.SmithsModding.armory:armory:" + config.minecraft_version + "-" + config.armory_version
+    runtime "com.SmithsModding.Armory:Armory:" + config.minecraft_version + "-" + config.armory_version
 
     //Maven uploader
     deployerJars 'org.apache.maven.wagon:wagon-ftp:2.2'
