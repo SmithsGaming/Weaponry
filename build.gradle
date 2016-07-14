@@ -216,11 +216,11 @@ task createVersionTag(type: Exec) {
 }
 
 task pushGitChanges(type: Exec) {
-    commandLine "git", "push", "origin", "-f", "Minecraft-" + config.minecraft_version.toString()
+    commandLine "git", "push", "origin", "-f", "Minecraft-" + config.minecraft_version.toString(), "--quiet"
 }
 
 task pushGitTags(type: Exec) {
-    commandLine "git", "push", "--tags"
+    commandLine "git", "push", "--tags", "--quiet"
 }
 
 gitSetEmail.mustRunAfter checkOutLocalMinecraftBranch
