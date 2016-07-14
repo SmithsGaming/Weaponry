@@ -73,8 +73,7 @@ def getDate() {
     return formattedDate
 }
 
-def build_file = new File("build_mode.properties")
-def build_mode = build_file.text
+def build_mode = config.build_mode
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
