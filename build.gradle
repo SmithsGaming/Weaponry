@@ -199,6 +199,14 @@ task checkOutLocalMinecraftBranch(type: Exec) {
     commandLine "git", "checkout", "-b", "Minecraft-" + config.minecraft_version.toString()
 }
 
+task gitSetEmail(type: Exec) {
+    commandLine "git", "config", "user.email", "travisforsmithsmodding@outlook.com"
+}
+
+task gitSetName(type: Exec) {
+    commandLine "git", "config", "user.name", "Travic CI For Smithsmodding"
+}
+
 task configRemoteGit(type: Exec) {
     commandLine "git", "config", "remote.origin.url", "https://" + System.getenv().GitUsername.toString() + ":" + System.getenv().GitPassword.toString() + "@github.com/smithsmodding/weaponry"
 }
@@ -215,7 +223,9 @@ task pushGitTags(type: Exec) {
     commandLine "git", "push", "--tags"
 }
 
-configRemoteGit.mustRunAfter checkOutLocalMinecraftBranch
+gitSetEmail.mustRunAfter checkOutLocalMinecraftBranch
+gitSetName.mustRunAfter gitSetEmail
+configRemoteGit.mustRunAfter gitSetName
 createVersionTag.mustRunAfter configRemoteGit
 pushGitChanges.mustRunAfter createVersionTag
 pushGitTags.mustRunAfter pushGitChanges
@@ -224,7 +234,7 @@ task createGithubBranches() {
     if ((System.getenv().TRAVIS_BRANCH.toString().contains("Development")) && (build_mode.toString().trim().equals("RELEASE")))
     {
         logger.lifecycle("Configuring upload to git.")
-        dependsOn checkOutLocalMinecraftBranch, configRemoteGit, createVersionTag, pushGitChanges, pushGitTags
+        dependsOn checkOutLocalMinecraftBranch, getSetName, gitSetEmail, configRemoteGit, createVersionTag, pushGitChanges, pushGitTags
         logger.lifecycle("Configuration complete. Current MC Version: " + config.minecraft_version.toString() + ". Branch name: Minecraft-" + config.minecraft_version.toString() + ".")
     }
     else
