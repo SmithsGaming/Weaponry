@@ -208,7 +208,7 @@ task gitSetName(type: Exec) {
 }
 
 task configRemoteGit(type: Exec) {
-    commandLine "git", "config", "remote.origin.url", "https://" + System.getenv().GitUsername.toString() + ":" + System.getenv().GitPassword.toString() + "@github.com/smithsmodding/weaponry"
+    commandLine "git", "config", "remote.origin.url", "https://" + System.getenv().GitUsername.toString() + ":" + System.getenv().GitPassword.toString() + "@github.com/SmithsGaming/Weaponry"
 }
 
 task createVersionTag(type: Exec) {
