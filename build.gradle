@@ -91,7 +91,7 @@ if(System.getenv().TRAVIS_BRANCH.toString().contains("Development"))
     version = version + "-SNAPSHOT"
 }
 group= "com.smithsmodding.armory.weaponry"
-archivesBaseName = "armory-weaponry"
+archivesBaseName = "Armory-Weaponry"
 
 //IDea fix for
 idea {
@@ -205,7 +205,6 @@ task('createGithubBranches') << {
         def createLocalBranchCMD = "git checkout -b Minecraft-" + config.minecraft_version.toString()
         def createLocalProg = createLocalBranchCMD.execute();
         createLocalProg.waitFor()
-
 
         //Adds a tag to the minecraft version specific branch for the version number.
         logger.lifecycle("Adding version tag.")
