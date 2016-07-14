@@ -180,7 +180,7 @@ curseforge {
 
                     relations {
                         requiredLibrary 'smithscore' // SmithScore is required
-                        requiredLibrary 'armory'
+                        requiredLibrary 'armory-armoring-the-world'
                         requiredLibrary 'tinkers-construct'
                     }
                 }
