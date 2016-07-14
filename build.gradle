@@ -196,23 +196,23 @@ curseforge {
 }
 
 task checkOutLocalMinecraftBranch(type: Exec) {
-    commandLine "git checkout -b Minecraft-" + config.minecraft_version.toString()
+    commandLine "git", "checkout", "-b", "Minecraft-" + config.minecraft_version.toString()
 }
 
 task configRemoteGit(type: Exec) {
-    commandLine "git config remote.origin.url https://" + System.getenv().GitUsername.toString() + ":" + System.getenv().GitPassword.toString() + "@github.com/smithsmodding/weaponry"
+    commandLine "git", "config", "remote.origin.url", "https://" + System.getenv().GitUsername.toString() + ":" + System.getenv().GitPassword.toString() + "@github.com/smithsmodding/weaponry"
 }
 
 task createVersionTag(type: Exec) {
-    commandLine "git tag -a " + version + " -m 'Autobuild by Travis CI. Build on: " + getDate() + ".'"
+    commandLine "git", "tag", "-a", version, "-m", "'Autobuild by Travis CI. Build on: " + getDate() + ".'"
 }
 
 task pushGitChanges(type: Exec) {
-    commandLine "git push origin -f Minecraft-" + config.minecraft_version.toString()
+    commandLine "git", "push", "origin", "-f", "Minecraft-" + config.minecraft_version.toString()
 }
 
 task pushGitTags(type: Exec) {
-    commandLine "git push --tags"
+    commandLine "git", "push", "--tags"
 }
 
 configRemoteGit.mustRunAfter checkOutLocalMinecraftBranch
