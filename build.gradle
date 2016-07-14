@@ -220,7 +220,7 @@ createVersionTag.mustRunAfter configRemoteGit
 pushGitChanges.mustRunAfter createVersionTag
 pushGitTags.mustRunAfter pushGitChanges
 
-task createGithubBranhes() {
+task createGithubBranches() {
     if ((System.getenv().TRAVIS_BRANCH.toString().contains("Development")) && (build_mode.toString().trim().equals("RELEASE")))
     {
         logger.lifecycle("Configuring upload to git.")
