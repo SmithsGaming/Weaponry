@@ -200,7 +200,7 @@ task checkOutLocalMinecraftBranch(type: Exec) {
 }
 
 task gitSetEmail(type: Exec) {
-    commandLine "git", "config", "user.email", "travisforsmithsmodding@outlook.com"
+    commandLine "git", "config", "user.email", "smithsmodding-travis@outlook.com"
 }
 
 task gitSetName(type: Exec) {
