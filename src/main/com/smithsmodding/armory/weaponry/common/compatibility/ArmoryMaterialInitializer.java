@@ -16,6 +16,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import slimeknights.tconstruct.library.TinkerRegistry;
 import slimeknights.tconstruct.library.materials.Material;
 import slimeknights.tconstruct.library.smeltery.CastingRecipe;
+import slimeknights.tconstruct.library.smeltery.ICastingRecipe;
 import slimeknights.tconstruct.shared.TinkerCommons;
 import slimeknights.tconstruct.tools.TinkerMaterials;
 
@@ -27,9 +28,6 @@ import java.util.List;
 public class ArmoryMaterialInitializer {
 
     public void onAPICallbackReceived(IArmoryAPI api) {
-        //Disabled steel as it is not in Tinkers Construct anymore.
-        //IArmorMaterial chain = api.getHelpers().getMaterialConstructionHelper().generateArmorMaterial(References.InternalNames.Materials.Vanilla.CHAIN, TranslationKeys.Materials.VisibleNames.Steel, "Steel", TextFormatting.GRAY, true, 1378, 0.25F, Colors.Metals.CHAIN, TinkerCommons.ingot);
-
         IArmorMaterial ardite = api.getHelpers().getMaterialConstructionHelper().generateArmorMaterial(References.InternalNames.Materials.TinkersConstruct.ARDITE, "Ardite", true, 2159, 18, 0.4F, TinkerCommons.ingotArdite);
         IArmorMaterial cobalt = api.getHelpers().getMaterialConstructionHelper().generateArmorMaterial(References.InternalNames.Materials.TinkersConstruct.COBALT, "Cobalt", true, 2056, 17, 0.3F, TinkerCommons.ingotCobalt);
         IArmorMaterial manyullun = api.getHelpers().getMaterialConstructionHelper().generateArmorMaterial(References.InternalNames.Materials.TinkersConstruct.MANYULLUN, "Manyullyn", true, 4215, 36, 0.489F, TinkerCommons.ingotManyullyn);
@@ -57,11 +55,14 @@ public class ArmoryMaterialInitializer {
     private void checkTinkersConstructMetals() {
         ModLogger.getInstance().info("Started checking TiC Registry.");
         int recipeCount = 0;
-        List<CastingRecipe> castingRecipe = TinkerRegistry.getAllTableCastingRecipes();
+        List<ICastingRecipe> castingRecipe = TinkerRegistry.getAllTableCastingRecipes();
 
-        for(CastingRecipe recipe : castingRecipe)
+        for (ICastingRecipe recipe : castingRecipe)
         {
-            if (checkIfRegisterIsNeededForRecipe(recipe))
+            if (!(recipe instanceof CastingRecipe))
+                continue;
+
+            if (checkIfRegisterIsNeededForRecipe((CastingRecipe) recipe))
                 recipeCount ++;
         }
 

@@ -27,7 +27,7 @@ public class ConversionRenderInfo extends MaterialRenderControllers.AbstractMate
         if (color == null) {
             sprite.load(Minecraft.getMinecraft().getResourceManager(), new ResourceLocation(location));
 
-            color = ColorSampler.calculateAverageMinecraftColor(sprite.getFrameTextureData(0));
+            color = new MinecraftColor(ColorSampler.calculateAverageMinecraftColor(sprite.getFrameTextureData(0)).brighter().brighter());
         }
 
         return sprite;
