@@ -10,7 +10,7 @@ import com.smithsmodding.armory.weaponry.common.compatibility.initializers.Manyu
 import com.smithsmodding.armory.weaponry.common.config.WeaponryConfigs;
 import com.smithsmodding.armory.weaponry.util.ModLogger;
 import com.smithsmodding.armory.weaponry.util.References;
-import com.smithsmodding.smithscore.util.common.ItemStackHelper;
+import com.smithsmodding.smithscore.util.common.helper.ItemStackHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.oredict.OreDictionary;
 import slimeknights.tconstruct.library.TinkerRegistry;
