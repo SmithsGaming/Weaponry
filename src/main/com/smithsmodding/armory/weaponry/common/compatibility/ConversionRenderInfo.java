@@ -1,11 +1,8 @@
 package com.smithsmodding.armory.weaponry.common.compatibility;
 
 import com.smithsmodding.armory.api.materials.MaterialRenderControllers;
-import com.smithsmodding.smithscore.util.client.color.ColorSampler;
 import com.smithsmodding.smithscore.util.client.color.MinecraftColor;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.util.ResourceLocation;
 import slimeknights.tconstruct.library.client.MaterialRenderInfo;
 
 /**
@@ -18,18 +15,12 @@ public class ConversionRenderInfo extends MaterialRenderControllers.AbstractMate
 
     public ConversionRenderInfo(MaterialRenderInfo tconRenderInfo) {
         this.tconRenderInfo = tconRenderInfo;
+        this.color = new MinecraftColor(tconRenderInfo.getVertexColor());
     }
 
     @Override
     public TextureAtlasSprite getTexture(TextureAtlasSprite baseTexture, String location) {
         TextureAtlasSprite sprite = tconRenderInfo.getTexture(baseTexture, location);
-
-        if (color == null) {
-            sprite.load(Minecraft.getMinecraft().getResourceManager(), new ResourceLocation(location));
-
-            color = new MinecraftColor(ColorSampler.calculateAverageMinecraftColor(sprite.getFrameTextureData(0)).brighter().brighter());
-        }
-
         return sprite;
     }
 
